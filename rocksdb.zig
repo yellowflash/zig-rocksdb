@@ -11,7 +11,7 @@ pub const Buffer = struct {
         clib.free(@ptrCast(self.buff));
     }
 
-    pub fn into(self: *Buffer, T: type) *T {
+    pub fn into(self: *const Buffer, T: type) *T {
         return @ptrCast(self.buff);
     }
 };
